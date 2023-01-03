@@ -1,38 +1,27 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    *{
+        @apply m-0 p-0 box-border
+    }
+    
+    body{
+        @apply bg-neutral-400 w-full h-screen
+    }
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@layer components{
+    .start_btn{
+        @apply py-2 px-4 text-neutral-200 rounded-xl duration-300 font-semibold text-2xl hover:text-emerald-700 active:text-emerald-700
+    }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+    .pause_btn{
+        @apply py-2 px-4 text-neutral-200 rounded-xl duration-300 font-semibold text-2xl hover:text-sky-500 active:text-sky-500
+    }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    .reset_btn{
+        @apply py-2 px-4 text-neutral-200 rounded-xl duration-300 font-semibold text-2xl hover:text-red-500 active:text-red-500
+    }
 }
